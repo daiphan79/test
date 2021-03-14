@@ -71,7 +71,7 @@ function ClickAir(){
     WriteDataToFirebase(valueLamp,valueFan,valueAir);
 }
 ////////////////// get value Temperature and Humidity from firebase/////
-var valueTemp = firebase.database().ref('DHT11').child('Temperature');
+var valueTemp = firebase.database().ref('Floors1').child('G');
 valueTemp.on('value', snap =>{
     console.log("Nhiet do :  "+snap.val());
     document.getElementById("tvTemp").innerHTML = snap.val()+" C";
